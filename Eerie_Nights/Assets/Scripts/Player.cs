@@ -4,46 +4,57 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-   
+    public int playerhealth;
+    public int Enemydamage;
 
-    [SerializeField] public int health;
-    public int damage;
-    [SerializeField] public EnemyData data;
-    public playerData pdata;
+    public playerData playerdata;
+  //public EnemyData data;
+
+    
 
 
-    private GameObject player;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
+
     private void Awake()
     {
+        setPlayerValues();
+    }
+    private void Update()
+    {
 
-        setValues();
+        if (playerhealth <= 0)
+        {
+            Destroy(GameObject.FindGameObjectWithTag("player"));
+        }
+
+
+        Debug.Log(Enemydamage);
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-       
 
-        if (health <= 0)
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.CompareTag("enemy"))
         {
-            Destroy(gameObject);
+
+            Enemydamage = collider.GetComponent<enemy>().damage;
+
+            Debug.Log("pie");
+            playerhealth -= Enemydamage;
+
         }
     }
 
-   
 
-   
-        
-
-    private void setValues()
+    private void setPlayerValues()
     {
-       
-        health = pdata.hp;
-      
 
+
+
+        
+        playerhealth = playerdata.hp;
     }
 }
+   
+

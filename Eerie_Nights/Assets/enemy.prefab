@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -8159319090966542540}
   m_Layer: 0
   m_Name: enemy
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,8 +104,8 @@ MonoBehaviour:
   pdamage: 0
   health: 5
   data: {fileID: 11400000, guid: c5c51516d4f6f7546b10817ade099a91, type: 2}
-  playerdater: {fileID: 11400000, guid: 9d6a23dd8ae63fa4ba709a58ad08fd61, type: 2}
   playerhealth: 0
+  playerdater: {fileID: 11400000, guid: 9d6a23dd8ae63fa4ba709a58ad08fd61, type: 2}
 --- !u!58 &8078028565078294355
 CircleCollider2D:
   m_ObjectHideFlags: 0

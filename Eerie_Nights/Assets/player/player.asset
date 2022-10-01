@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64b6baf6a991374ab93296326b9588a, type: 3}
   m_Name: player
   m_EditorClassIdentifier: 
-  hp: -8
+  hp: 10
   damage: 2
   speed: 6
   jumpingPower: 6

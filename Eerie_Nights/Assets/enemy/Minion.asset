@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e3d7df8d917394282036bce7c19034, type: 3}
   m_Name: Minion
   m_EditorClassIdentifier: 
-  hp: 2
+  hp: 4
   damage: 2
   speed: 0.75

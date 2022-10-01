@@ -10,12 +10,10 @@ public class enemy : MonoBehaviour
     [SerializeField] public int health;
 
     [SerializeField] public EnemyData data;
-
+    public int playerhealth;
     public playerData playerdater;
 
-    public int playerhealth;
 
-    public Player _player;
 
 
     private GameObject player;
@@ -42,36 +40,31 @@ public class enemy : MonoBehaviour
 
 
 
-        if (playerhealth <= 0)
-        {
-            Destroy(GameObject.FindGameObjectWithTag("player"));
-        }
+        //  if (playerhealth <= 0)
+        //{
+        //  Destroy(GameObject.FindGameObjectWithTag("player"));
+        //}
     }
 
-   private void chase()
+    private void chase()
     {
-       transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }
 
-    private void OnTriggerStay2D(Collider2D collider)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.CompareTag("projectile"))
         {
             health -= pdamage;
         }
-        else if (collider.CompareTag("player"))
-        {
-            Debug.Log("pie");
-            playerdater.hp -= damage;
-        }
-    }
 
-    private void setEnemyValues()
-    {
-        damage = data.damage;
-        speed = data.speed;
-        health = data.hp;
-        pdamage = playerdater.damage;
-        playerhealth = playerdater.hp;
     }
+        private void setEnemyValues()
+        {
+            damage = data.damage;
+            speed = data.speed;
+            health = data.hp;
+            pdamage = playerdater.damage;
+            playerhealth = playerdater.hp;
+        }
 }
