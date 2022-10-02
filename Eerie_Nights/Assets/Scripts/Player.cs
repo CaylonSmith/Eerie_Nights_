@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class Player : MonoBehaviour
 {
     public int playerhealth;
     public int Enemydamage;
     public int pExp;
     public playerData playerdata;
-  //public EnemyData data;
+    public TextMeshProUGUI textMesh;
 
     
 
@@ -16,11 +16,13 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-
+       
         setPlayerValues();
     }
     private void Update()
     {
+
+
 
         if (playerhealth <= 0)
         {
@@ -28,6 +30,7 @@ public class Player : MonoBehaviour
         }
 
 
+        textMesh.text = pExp.ToString();
         Debug.Log(Enemydamage);
 
     }
