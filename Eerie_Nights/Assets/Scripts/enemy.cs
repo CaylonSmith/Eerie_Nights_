@@ -8,7 +8,7 @@ public class enemy : MonoBehaviour
     [SerializeField] public float speed;
     public int pdamage;
     [SerializeField] public int health;
-
+    public GameObject Exp;
     [SerializeField] public EnemyData data;
     public int playerhealth;
     public playerData playerdater;
@@ -35,11 +35,13 @@ public class enemy : MonoBehaviour
 
         if (health <= 0)
         {
+            GameObject newExp = Instantiate(Exp, transform.position, Quaternion.identity);
+
             Destroy(gameObject);
         }
 
 
-
+    
         //  if (playerhealth <= 0)
         //{
         //  Destroy(GameObject.FindGameObjectWithTag("player"));

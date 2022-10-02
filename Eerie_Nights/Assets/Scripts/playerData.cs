@@ -12,7 +12,7 @@ public class playerData : ScriptableObject
     public int damage;
     public float speed;
     public float jumpingPower;
-     
+  
 
 
 }

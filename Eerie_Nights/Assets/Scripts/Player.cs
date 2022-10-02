@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     public int playerhealth;
     public int Enemydamage;
-
+    public int pExp;
     public playerData playerdata;
   //public EnemyData data;
 
@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+
         setPlayerValues();
     }
     private void Update()
@@ -44,6 +45,16 @@ public class Player : MonoBehaviour
             playerhealth -= Enemydamage;
 
         }
+
+
+        if (collider.CompareTag("exp"))
+        {
+            pExp += 1;
+         
+        }
+
+
+
     }
 
 
@@ -52,7 +63,7 @@ public class Player : MonoBehaviour
 
 
 
-        
+    
         playerhealth = playerdata.hp;
     }
 }
