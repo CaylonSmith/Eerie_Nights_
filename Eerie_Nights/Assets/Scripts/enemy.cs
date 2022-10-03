@@ -13,14 +13,15 @@ public class enemy : MonoBehaviour
     public int playerhealth;
     public playerData playerdater;
     public GameObject Myplayer;
-    public bool pDam;
-
+    public int Damageupgrade;
+    public int expp;
 
     private GameObject player;
     // Start is called before the first frame update
     void Start()
     {
         pdamage = Myplayer.GetComponent<Player>().pdamage;
+       
     }
     private void Awake()
     {
@@ -37,6 +38,10 @@ public class enemy : MonoBehaviour
         chase();
 
         player = GameObject.FindGameObjectWithTag("player");
+
+
+
+        expp = player.GetComponent<Player>().pExp;
 
 
         if (health <= 0)
@@ -76,4 +81,31 @@ public class enemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("player");
         playerhealth = playerdater.hp;
         }
+
+
+
+
+
+
+    public void buyDameupgrade()
+    {
+        if (expp>= Damageupgrade)
+        {
+
+
+            expp -= Damageupgrade;
+
+            pdamage++;
+            Damageupgrade += 2;
+
+
+        }
+
+    }
+
+
+
+
+
+
 }
