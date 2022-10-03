@@ -9,7 +9,7 @@ public class enemySpawner : MonoBehaviour
     public int totalenemyspwan;
     public float intervel =3.5f;
     public float counter;
-
+    public int enemiesToSpawn;
 
 
 
@@ -56,7 +56,7 @@ public class enemySpawner : MonoBehaviour
 
     private void stopEnemies()
     {
-        if (totalenemyspwan >= 15)
+        if (totalenemyspwan >= enemiesToSpawn)
         {
             Destroy(gameObject);
         }

@@ -12,26 +12,32 @@ public class enemy : MonoBehaviour
     [SerializeField] public EnemyData data;
     public int playerhealth;
     public playerData playerdater;
-
-
+    public GameObject Myplayer;
+    public bool pDam;
 
 
     private GameObject player;
     // Start is called before the first frame update
     void Start()
     {
+        pdamage = Myplayer.GetComponent<Player>().pdamage;
     }
     private void Awake()
     {
 
-        player = GameObject.FindGameObjectWithTag("player");
+     
         setEnemyValues();
+    
     }
 
-    // Update is called once per frame
-    void Update()
+
+        // Update is called once per frame
+        void Update()
     {
         chase();
+
+        player = GameObject.FindGameObjectWithTag("player");
+
 
         if (health <= 0)
         {
@@ -41,7 +47,8 @@ public class enemy : MonoBehaviour
         }
 
 
-    
+
+
         //  if (playerhealth <= 0)
         //{
         //  Destroy(GameObject.FindGameObjectWithTag("player"));
@@ -66,7 +73,7 @@ public class enemy : MonoBehaviour
             damage = data.damage;
             speed = data.speed;
             health = data.hp;
-            pdamage = playerdater.damage;
-            playerhealth = playerdater.hp;
+        player = GameObject.FindGameObjectWithTag("player");
+        playerhealth = playerdater.hp;
         }
 }

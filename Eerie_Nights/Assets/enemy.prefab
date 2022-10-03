@@ -107,6 +107,8 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: c5c51516d4f6f7546b10817ade099a91, type: 2}
   playerhealth: 0
   playerdater: {fileID: 11400000, guid: 9d6a23dd8ae63fa4ba709a58ad08fd61, type: 2}
+  Myplayer: {fileID: 588987972804044616, guid: c443ba6e1c3bb5941a3ad29b04df2da8, type: 3}
+  pDam: 0
 --- !u!58 &8078028565078294355
 CircleCollider2D:
   m_ObjectHideFlags: 0
