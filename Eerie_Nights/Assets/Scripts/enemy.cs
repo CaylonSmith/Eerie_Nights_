@@ -20,8 +20,9 @@ public class enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pdamage = Myplayer.GetComponent<Player>().pdamage;
-       
+      
+        player = GameObject.FindGameObjectWithTag("player");
+
     }
     private void Awake()
     {
@@ -37,8 +38,8 @@ public class enemy : MonoBehaviour
     {
         chase();
 
-        player = GameObject.FindGameObjectWithTag("player");
 
+       
 
 
         expp = player.GetComponent<Player>().pExp;
@@ -69,6 +70,7 @@ public class enemy : MonoBehaviour
     {
         if (collider.CompareTag("projectile"))
         {
+            pdamage = GameObject.FindGameObjectWithTag("player").GetComponent<Player>().pdamage;
             health -= pdamage;
         }
 
@@ -78,7 +80,7 @@ public class enemy : MonoBehaviour
             damage = data.damage;
             speed = data.speed;
             health = data.hp;
-        player = GameObject.FindGameObjectWithTag("player");
+     
         playerhealth = playerdater.hp;
         }
 
@@ -94,7 +96,7 @@ public class enemy : MonoBehaviour
 
 
             expp -= Damageupgrade;
-
+            pdamage = Myplayer.GetComponent<Player>().pdamage;
             pdamage++;
             Damageupgrade += 2;
 

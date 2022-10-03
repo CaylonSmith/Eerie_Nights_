@@ -108,7 +108,7 @@ public class Player : MonoBehaviour
 
 
             pExp -= Damageupgrade;
-            PlayerUpgradedDam = true;
+           
             pdamage += 1;
             Damageupgrade += 2;
 
