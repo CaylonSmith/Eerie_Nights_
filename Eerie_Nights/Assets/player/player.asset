@@ -15,4 +15,4 @@ MonoBehaviour:
   hp: 10
   damage: 2
   speed: 6
-  jumpingPower: 6
+  jumpingPower: 8
