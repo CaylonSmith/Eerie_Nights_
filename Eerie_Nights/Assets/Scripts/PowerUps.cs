@@ -25,7 +25,7 @@ public class PowerUps : MonoBehaviour
 
 
 
-    public int Exp;
+    public float Exp;
 
     private void Awake()
     {

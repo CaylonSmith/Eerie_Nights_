@@ -14,7 +14,7 @@ public class enemy : MonoBehaviour
     public playerData playerdater;
     public GameObject Myplayer;
     public int Damageupgrade;
-    public int expp;
+    public float expp;
 
     private GameObject player;
     // Start is called before the first frame update
@@ -39,7 +39,7 @@ public class enemy : MonoBehaviour
         chase();
 
 
-       
+
 
 
         expp = player.GetComponent<Player>().pExp;
@@ -48,8 +48,9 @@ public class enemy : MonoBehaviour
         if (health <= 0)
         {
             GameObject newExp = Instantiate(Exp, transform.position, Quaternion.identity);
-
+            playerhealth += 1;
             Destroy(gameObject);
+
         }
 
 

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e3d7df8d917394282036bce7c19034, type: 3}
   m_Name: BigMinion
   m_EditorClassIdentifier: 
-  hp: 40
-  damage: 20
-  speed: 0
+  hp: 12
+  damage: 6
+  speed: 0.5
