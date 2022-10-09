@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -37,6 +38,8 @@ public class Player : MonoBehaviour
     public TextMeshProUGUI speedcost_;
     public TextMeshProUGUI DamageupgradeCost_;
     public TextMeshProUGUI _playerhealth;
+    public int totalEnemiesToKill = 54;
+    
 
     private void Awake()
     {
@@ -55,13 +58,14 @@ public class Player : MonoBehaviour
         if (playerhealth <= 0)
         {
             Destroy(GameObject.FindGameObjectWithTag("player"));
+            SceneManager.LoadScene(2);
         }
 
         updatehealth_exp();
 
         updateAbilities();
 
-
+        checkEnemies();
 
     }
 
@@ -76,6 +80,7 @@ public class Player : MonoBehaviour
 
             Debug.Log("pie");
             playerhealth -= Enemydamage;
+
 
         }
 
@@ -101,7 +106,7 @@ public class Player : MonoBehaviour
             maxUpgrade += 1;
 
             pExp -= shmorecost;
-            _weapon.startTimebtwShots -= 0.3f;
+            _weapon.startTimebtwShots -= 0.5f;
             shmorecost += 1;
             maxUpgrade4 += 1;
 
@@ -205,8 +210,25 @@ public class Player : MonoBehaviour
     {
         DamageupgradeCost_.text = Damageupgrade.ToString();
         _maxUpgrade1.text = maxUpgrade1.ToString();
+
+        speedcost_.text = speedcost.ToString();
+        _maxUpgrade2.text = maxUpgrade2.ToString();
+
+        jumpupcost_.text = jumpupcost.ToString();
+        _maxUpgrade3.text = maxUpgrade3.ToString();
+
+        shmorecost_.text = shmorecost.ToString();
+        _maxUpgrade4.text = maxUpgrade4.ToString();
     }
 
+
+    private void checkEnemies()
+    {
+        if (totalEnemiesToKill <=0)
+        {
+            SceneManager.LoadScene(3);
+        }
+    }
 
 }
    

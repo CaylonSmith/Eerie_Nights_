@@ -15,6 +15,9 @@ public class enemy : MonoBehaviour
     public GameObject Myplayer;
     public int Damageupgrade;
     public float expp;
+    private int totalEnemiesToKill;
+
+
 
     private GameObject player;
     // Start is called before the first frame update
@@ -49,6 +52,7 @@ public class enemy : MonoBehaviour
         {
             GameObject newExp = Instantiate(Exp, transform.position, Quaternion.identity);
             playerhealth += 1;
+            player.GetComponent<Player>().totalEnemiesToKill-= 1;
             Destroy(gameObject);
 
         }

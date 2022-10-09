@@ -142,12 +142,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c44b3bcf6cfbe7b4e9aa6013ffa4a21f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 40, y: 40}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -187,18 +187,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.26081944, y: 0.1862998}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 2.5, y: 2.5}
+    newSize: {x: 40, y: 40}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.89567184, y: 1.3725996}
   m_EdgeRadius: 0
 --- !u!114 &588987972804044623
 MonoBehaviour:
@@ -258,8 +258,25 @@ MonoBehaviour:
   _weapon: {fileID: 588987972804044622}
   shmorecost: 1
   jumpupcost: 1
+  speedcost: 0
   pMOvement: {fileID: 588987972804044623}
   MyEnemy: {fileID: 8078028565078294356, guid: cfcb84b59cf948d49bf9446ee4515729, type: 3}
   Damageupgrade: 1
   _emmmy: {fileID: 8078028565078294353, guid: cfcb84b59cf948d49bf9446ee4515729, type: 3}
   PlayerUpgradedDam: 0
+  maxUpgrade: 0
+  setUpgradeMax: 0
+  shopButtons: 
+  maxUpgrade1: 0
+  maxUpgrade2: 0
+  maxUpgrade3: 0
+  maxUpgrade4: 0
+  _maxUpgrade1: {fileID: 0}
+  _maxUpgrade2: {fileID: 0}
+  _maxUpgrade3: {fileID: 0}
+  _maxUpgrade4: {fileID: 0}
+  shmorecost_: {fileID: 0}
+  jumpupcost_: {fileID: 0}
+  speedcost_: {fileID: 0}
+  DamageupgradeCost_: {fileID: 0}
+  _playerhealth: {fileID: 0}
